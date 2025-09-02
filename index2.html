@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информационный стенд - Лепельский лесхоз</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🌲</div>
+    <div class="title">"Лепельский лесхоз"</div>
+    <div class="lang-switch"> </div>
+  </header>
+
+  <main>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="graf1.jpg" alt="Баня" onclick="openModal(this)">
+      </div>
+      <div class="photo-item">
+        <img src="graf2.jpg" alt="Беседка" onclick="openModal(this)">
+      </div>
+      <div class="photo-item">
+        <img src="graf3.jpg" alt="Домик" onclick="openModal(this)">
+      </div>
+      <div class="photo-item">
+        <img src="graf4.jpg" alt="Домик" onclick="openModal(this)">
+      </div>
+      <div class="photo-item">
+        <img src="graf5.jpg" alt="Домик" onclick="openModal(this)">
+      </div>
+      <div class="photo-item">
+        <img src="graf6.jpg" alt="Домик" onclick="openModal(this)">
+      </div>
+    </div>
+  
+    <!-- Модальное окно для увеличенного изображения -->
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-image">
+      <div id="caption"></div>
+    </div>     
+  
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <div id="clock">--:--</div>
+      <div id="date">--.--.----</div>
+    </div>
+    <div class="footer-center">
+      <button onclick="goHome()" class="home-btn">На главную</button>
+    </div>
+    <div class="footer-right">
+      <img src="qr-code-placeholder.png" alt="QR-код" class="qr-code">
+    </div>
+  </footer>
+
+  <div class="instruction">Для навигации используйте сенсорный экран</div>
+  
+  
+
+  
+  <script src="script.js"></script>
+  </body>
+</html>

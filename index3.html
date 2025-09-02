@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информационный стенд - Лепельский лесхоз</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🌲</div>
+    <div class="title">"Лепельский лесхоз"</div>
+    <div class="lang-switch"></div>
+  </header>
+
+  <main>
+    <!-- Единый день информирования -->
+    <div class="accordion-section">
+      <button class="accordion" onclick="toggleAccordion(this)">
+        Единый день информирования
+      </button>
+      <div class="accordion-panel">
+        <p>День информирования проводится в третий четверг каждого месяца.</p>
+        <div class="media-text-block-left">
+          <div>
+            <img src="photo5.jpg" class="photo-left" onclick="openModal(this)">
+          </div>
+        </div>
+        <button class="accordion" onclick="toggleAccordion(this)">
+          Материал
+        </button>
+        <div class="accordion-panel">
+          <div class="ppt-container">
+            <iframe 
+              src="https://docs.google.com/presentation/d/e/2PACX-1vQlWJNQdAIzwZlqOUvA_V-5xcFYvAdgvpcKIpmeWBOu9e8EEYfOxSpiNIb-UwzuQg/pubembed?start=true&loop=true&delayms=3000&rm=minimal" 
+              frameborder="0" 
+              width="480" 
+              height="299" 
+              allowfullscreen="true" 
+              mozallowfullscreen="true" 
+              webkitallowfullscreen="true">
+            </iframe>
+          </div>
+             <div class="docs-gallery">
+                <div class="doc-card" onclick="openDoc('doc1.pdf')">
+                  <img src="asad.png" class="doc-icon" alt="Материал адресованный интеллигенции">
+                  <p>Материал адресованный интеллигенции</p>
+                </div>
+                <div class="doc-card" onclick="openDoc('doc2.pdf')">
+                  <img src="asad.png" class="doc-icon" alt="Материал адресованный молодежи">
+                  <p>Материал адресованный молодежи</p>
+                </div>
+                <div class="doc-card" onclick="openDoc('doc3.pdf')">
+                  <img src="asad.png" class="doc-icon" alt="Материал адресованный работникам">
+                  <p>Материал адресованный работникам</p>
+                </div>
+                <div class="doc-card" onclick="openDoc('doc4.pdf')">
+                  <img src="asad.png" class="doc-icon" alt="Общий материал">
+                  <p>Общий материал</p>
+                </div>
+              </div>
+
+<!-- Модальное окно -->
+<div id="docModal" class="modal">
+  <span class="close" onclick="closeDoc()">&times;</span>
+  <iframe id="docFrame" width="100%" height="90%"></iframe>
+</div>
+             
+        </div>
+      </div>
+    </div>
+
+    <!-- Идеологическая работа -->
+    <div class="accordion-section">
+      <button class="accordion" onclick="toggleAccordion(this)">
+        Идеологическая работа
+      </button>
+      <div class="accordion-panel">
+        <div class="doc-card" onclick="openDoc('doc5.pdf')">
+          <br>
+                  <img src="asad.png" class="doc-icon" alt="План мероприятий на 2025 год">
+                  <p>План мероприятий на 2025 год</p>
+                </div>
+      </div>
+    </div>
+
+    <!-- БРСМ -->
+    <div class="accordion-section">
+      <button class="accordion" onclick="toggleAccordion(this)">
+        БРСМ
+      </button>
+      <div class="accordion-panel">
+        <p>
+          Белорусский республиканский союз молодёжи (БРСМ) — массовая молодёжная организация, 
+          объединяющая молодых людей.
+        </p>
+
+        <!-- Две фотографии -->
+        <div class="image-row">
+          <img src="photo1.jpg" onclick="openModal(this)">
+          <img src="photo2.jpg" onclick="openModal(this)">
+        </div>
+
+        <br>
+
+        <!-- Подраздел Материал -->
+        <button class="accordion" onclick="toggleAccordion(this)">
+          Материал
+        </button>
+        <div class="accordion-panel">
+          <div class="single-photo-container">
+            <img src="photo3.jpg" onclick="openModal(this)">
+          </div>  
+
+          <div class="media-text-block">
+            <video class="video-element" autoplay loop muted playsinline>
+              <source src="video.mp4" type="video/mp4">
+            </video>
+
+            <div>
+              <div class="rhfcbdsv">
+                <h3>Мы поднимаем гордо наш флаг!</h3>
+                <p>
+                  Мы объявляем о старте эстафеты «Ганаруся роднымi сімваламi», посвященной Дню Государственного герба, Государственного флага и Государственного гимна Республики Беларусь.
+                </p>
+                <p>
+                  Эстафета пройдет с 6 по 12 мая. Выполняй условия и ищи лучшие фотографии в официальных аккаунтах БРСМ.
+                </p>
+                <p>
+                  Публикуй в своих социальных сетях фото с государственными символами Республики Беларусь. Не забывай ставить хештеги:
+                  <br>
+                  <strong>
+                    #Ганарусяроднымiсімваламi #роднаенароднае #знаюсвойфлаг 
+                    #мойфлаг #мойсцяг #мойгимн #Беларусь
+                  </strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Конец "Материал" -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <div id="caption"></div>
+  </div>
+
+  <!-- Подвал -->
+  <div>
+    <footer>
+      <div class="footer-left">
+        <div class="time-container">
+          <div id="clock">--:--</div>
+          <div id="date">--.--.----</div>
+        </div>
+        <img src="god_ka4.png" alt="QR-код" class="qr-code">
+      </div>
+      <div class="footer-center">
+        <button onclick="goHome()" class="home-btn">На главную</button>
+      </div>
+      <div class="footer-right">
+        <img src="qr-code-placeholder.png" alt="QR-код" class="qr-code">
+      </div>
+    </footer>
+  </div>
+
+  <div class="instruction">
+    Для навигации используйте сенсорный экран
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информационный стенд - Лепельский лесхоз</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🌲</div>
+    <div class="title">"Лепельский лесхоз"</div>
+    <div class="lang-switch"> </div>
+  </header>
+
+  <main>
+    <div class="nav-grid">
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle">О предприятии</button>
+        <div class="dropdown-menu">
+          <a href="https://lepelles.by/informatsiya/istoriya-leskhoza">История лесхоза</a>
+          <a href="https://lepelles.by/informatsiya/leskhoz-segodnya">Лесхоз сегодня</a>
+          <a href="https://lepelles.by/informatsiya/geraldika-i-gimn">Геральдика и гимн</a>
+          <a href="https://lepelles.by/informatsiya/god-ka4estva">Год благоустройства страны</a>
+          <a href="https://lepelles.by/informatsiya/antikorruptsionnaya-deyatelnost">Антикоррупционная деятельность</a>
+          <a href="https://lepelles.by/informatsiya/sertifikatsiya">Сертификация</a>
+          <a href="https://lepelles.by/informatsiya/okhrana-truda">Охрана труда</a>
+          <a href="/lepel_kiosk/index3.html">Идеология</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle">Структура лесхоза</button>
+        <div class="dropdown-menu">
+          <a href="https://lepelles.by/struktura-leskhoza/lesnichestva">Лесничества</a>
+          <a href="https://lepelles.by/struktura-leskhoza/pogruzochno-razgruzochnaya-ploshchadka">Погрузочно-разгрузочная площадка</a>
+          <a href="https://lepelles.by/struktura-leskhoza/lesnoj-pitomnik">Лесной питомник</a>
+          <a href="https://lepelles.by/struktura-leskhoza/okhotniche-khozyajstvo">Охотничье хозяйство</a>
+          <a href="https://lepelles.by/struktura-leskhoza/remontno-mekhanicheskie-masterskie">Ремонтно-механические мастерские</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle">Продукция и услуги</button>
+        <div class="dropdown-menu">
+          <a href="https://lepelles.by/produktsiya-i-uslugi/torgovaya-ploshchadka">Торговая площадка</a>
+          <a href="https://lepelles.by/produktsiya-i-uslugi/lesomaterialy">Лесоматериалы</a>
+          <a href="https://lepelles.by/produktsiya-i-uslugi/pilomaterialy">Пиломатериалы</a>
+          <a href="https://lepelles.by/produktsiya-i-uslugi/shchepa-toplivnaya-i-drova">Щепа топливная и дрова</a>
+          <a href="https://lepelles.by/produktsiya-i-uslugi/posadochnyj-material-i-semena">Посадочный материал и семена</a>
+          <a href="https://lepelles.by/produktsiya-i-uslugi/pilomaterialy">Продукция побочного лесопользования</a>
+          <a href="https://lepelles.by/produktsiya-i-uslugi/avtotransport">Автотранспорт</a>
+          <a href="https://lepelles.by/produktsiya-i-uslugi/prochie-tovary-i-uslugi">Прочие товары и услуги</a>
+          <a href="https://lepelles.by/produktsiya-i-uslugi/drevesnye-toplivnye-granuly">Древесные топливные гранулы</a>       
+        </div>
+      </div>  
+      <div class="dropdown">
+          <button class="nav-btn dropdown-toggle">Лесное хозяйство</button>
+          <div class="dropdown-menu">
+            <a href="https://lepelles.by/lesnoe-khozyajstvo/okhrana-i-zashchita-lesa">Охрана и защита леса</a>
+            <a href="https://lepelles.by/lesnoe-khozyajstvo/lesovosstanovlenie">Лесовосстановление</a>
+            <a href="https://lepelles.by/lesnoe-khozyajstvo/dendropark">Дендропарк</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="nav-btn dropdown-toggle">Производство</button>
+          <div class="dropdown-menu">
+            <a href="https://lepelles.by/proizvodstvo/lesozagotovka">Лесозаготовка</a>
+            <a href="https://lepelles.by/proizvodstvo/lesopilenie">Лесопиление</a>
+          </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" onclick="window.location.href='https://lepelles.by/novosti'">Новости</button>
+      </div>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" onclick="window.location.href='index2.html'">Прямые телефонные линии</button>
+      </div>
+      <div class="dropdown">
+        <button class="nav-btn dropdown-toggle" onclick="window.location.href='https://lepelles.by/kontakty'">Контакты</button>
+      </div>
+      
+      
+              
+    </div>     
+  
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <div class="time-container">
+        <div id="clock">--:--</div>
+        <div id="date">--.--.----</div>
+      </div>
+      <img src="god_ka4.png" alt="QR-код" class="qr-code">
+    </div>
+    
+    
+    <div class="footer-center">
+      <button onclick="goHome()" class="home-btn">На главную</button>
+    </div>
+    <div class="footer-right">
+      <img src="qr-code-placeholder.png" alt="QR-код" class="qr-code">
+    </div>
+    
+  </footer>
+
+  <div class="instruction">Для навигации используйте сенсорный экран</div>
+  <div style="text-align: center; font-size: 40px; font-weight: bold; margin-top: 20px; color: black;">
+    В продаже имеется
+  </div>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <a href="https://lepelles.by/produktsiya-i-uslugi/banya">
+        <img src="баня.jpg" alt="Image 1" style="width:100%">
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://lepelles.by/produktsiya-i-uslugi/besedki/">
+        <img src="Беседка копия.jpg" alt="Image 2" style="width:100%">
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://lepelles.by/produktsiya-i-uslugi/dom">
+        <img src="домик.jpg" style="width:100%">
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://lepelles.by/produktsiya-i-uslugi/doski">
+        <img src="Доска копия.jpg" alt="Image 3" style="width:100%">
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://lepelles.by/produktsiya-i-uslugi/prod">
+        <img src="Дрова копия.jpg" alt="Image 3" style="width:100%">
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://lepelles.by/produktsiya-i-uslugi/mjod">
+        <img src="Мёд копия.jpg" alt="Image 3" style="width:100%">
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://lepelles.by/produktsiya-i-uslugi/otsilindrovka-na-vneshnij-rynok">
+        <img src="Оцилиндровка копия.jpg" alt="Image 3" style="width:100%">
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://lepelles.by/produktsiya-i-uslugi/pogon">
+        <img src="Погонажные изделия копия.jpg" alt="Image 3" style="width:100%">
+      </a>
+    </div>
+  </div>
+
+  <p style="text-align: center;">
+    <iframe class="mce-item-media mce-item-iframe" style="display: block; margin-left: auto; margin-right: auto;"  width="700" height="400" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+  </p>
+  <script src="script.js"></script>
+  </body>
+</html>

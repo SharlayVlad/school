@@ -1,0 +1,589 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f3ef;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header {
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2b4f2d;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 2em;
+}
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 30px;
+}
+.nav-btn {
+  background-color: #2b4f2d;
+  color: white;
+  font-size: 1.4em;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+  border: none;
+}
+.nav-btn:hover {
+  background-color: #3e6c41;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #2b4f2d;
+}
+.home-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #2b4f2d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.qr-code {
+  width: 80px;
+}
+.instruction {
+  text-align: center;
+  padding: 10px;
+  background: #e0e0e0;
+  font-size: 1em;
+}
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-toggle {
+  width: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  flex-direction: column;
+  background-color: #3e6c41;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+  display: flex;
+}
+
+.dropdown-menu.show {
+  max-height: 500px;
+}
+
+.dropdown-menu a {
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  border-top: 1px solid #2b4f2d;
+  background-color: #3e6c41;
+}
+
+.dropdown-menu a:first-child {
+  border-top: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown-menu a:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+/* Стили для слайдшоу */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Эффект перехода (fade) */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Сетка фото */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Количество колонок адаптируется под экран */
+  gap: 20px; /* Отступы между элементами */
+  padding: 20px;
+}
+
+.photo-item {
+  position: relative;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.photo-item img:hover {
+  transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+/* Модальное окно */
+.modal {
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed;
+  z-index: 1; /* Слой поверх остальной страницы */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Окно с прокруткой, если изображение слишком большое */
+  background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  text-align: center;
+  color: #ccc;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.footer-left {
+  display: flex; /* Используем flexbox для выравнивания */
+  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: flex-start; /* Размещаем элементы слева */
+}
+
+.time-container {
+  display: flex; /* Используем flexbox для вертикального выравнивания */
+  flex-direction: column; /* Размещаем элементы в столбик */
+  margin-right: 10px; /* Отступ между временем и картинкой */
+}
+
+#clock,
+#date {
+  margin: 0; /* Убираем отступы между строками времени и даты */
+}
+
+.qr-code {
+  width: 110px; /* Устанавливаем ширину для QR-кода */
+  height: 110px; /* Устанавливаем высоту для QR-кода */
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative; /* Важно для абсолютного позиционирования кнопки */
+}
+
+.home-btn {
+  padding: 15px 20px;
+  font-size: 1em;
+  background-color: #2b4f2d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute; /* Делаем кнопку абсолютно позиционированной */
+  top: -25px; /* Начальная позиция кнопки сверху */
+  left: 72px; /* Начальная позиция кнопки слева */
+  user-select: none; /* Отключаем выделение текста кнопки при перетаскивании */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.dropbtn {
+  background-color: #3e6c41;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.accordion-section {
+  margin: 20px;
+}
+
+.accordion {
+  background-color: #3e6c41;
+  color: white;
+  cursor: pointer;
+  padding: 14px 20px;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.accordion:hover {
+  background-color: #3e6c41;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  background-color: #f9f9f9;
+  padding: 0 20px;
+  border-left: 4px solid #3e6c41;
+  border-radius: 0 0 6px 6px;
+}
+
+.accordion-panel p {
+  margin: 15px 0;
+}
+
+
+
+.image-row {
+  display: flex;
+  justify-content: left;
+  gap: 20px; /* расстояние между фото */
+  flex-wrap: wrap; /* если экран узкий — фото встанут друг под другом */
+  margin-top: 15px;
+}
+
+.image-row img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.media-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.media-row img,
+.media-row video {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+
+.video-element {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.rhfcbdsv {
+  max-width: 400px;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.rhfcbdsv h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #2e7d32;
+}
+
+.rhfcbdsv strong {
+  color: #004d40;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .media-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.media-text-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.video-element {
+  width: 320px;
+  height: auto;
+  border: none;
+  outline: none;
+  object-fit: cover;
+}
+
+.rhfcbdsv {
+  max-width: 500px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-panel.open {
+  max-height: 2000px; 
+  overflow-y: auto;
+}
+
+.single-photo-container img {
+  max-width: 500px; /* уменьшаем ширину */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* выравнивание по центру */
+  cursor: pointer; /* чтобы видно, что можно нажать */
+}
+
+/* Стили для блока с photo5 */
+.media-text-block-left {
+  display: flex;
+  justify-content: center; /* прижимаем к левому краю */
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.media-text-block-left .photo-left {
+  max-width: 300px; /* можно уменьшить или увеличить */
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0;
+  cursor: pointer; /* чтобы было понятно, что кликабельно */
+}
+
+.docs-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.doc-card {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.doc-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.doc-card:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal iframe {
+  border: none;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.docs-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* расстояние между карточками */
+}
+
+.doc-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 150px; /* фиксированная ширина карточки */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.doc-card:hover {
+    transform: scale(1.05);
+    background-color: #f5f5f5;
+}
+
+.doc-icon {
+    width: 48px;  /* уменьшаем иконку */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.doc-card p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+}
+
+.ppt-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.ppt-container iframe {
+    width: 150%;
+    max-width: 1500px; /* можно увеличить для большего размера */
+    aspect-ratio: 16 / 9; /* сохраняем пропорции без чёрных полос */
+    height: auto;
+    border: none;
+}
+
+
+
